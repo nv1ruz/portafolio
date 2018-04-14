@@ -7,9 +7,9 @@ export class InformacionService {
 
   info: any = {};
   cargada: boolean = false;
+
   cargada_sobre_nosotros = false;
   equipo:any[] = [];
-
   urlEquipo:string = "https://paginaweb-116fb.firebaseio.com/equipo.json";
 
 
@@ -38,7 +38,7 @@ export class InformacionService {
 
     this.http.get( this.urlEquipo ).subscribe( data => {
 
-      console.log( data.json() );
+      // console.log( data.json() );
       this.cargada_sobre_nosotros = true;
       this.equipo = data.json();
 
