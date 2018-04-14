@@ -32,7 +32,15 @@ export class ProductosService {
 
     });
 
-    }
+  }
+
+
+  public cargar_producto( cod:string ){
+
+    return this.http.get(`https://paginaweb-116fb.firebaseio.com/productos/${ cod }.json`);
 
   }
+
+
+}
 
